@@ -1,0 +1,15 @@
+[package]
+name = "librespot-test"
+version = "0.1.0"
+
+[[bin]]
+name = "main"
+path = "main.rs"
+
+[dependencies]
+portaudio       = { git = "https://github.com/mvdnes/portaudio-rs" }
+vorbis          = "~0.0.14"
+tremor          = { git = "https://github.com/plietar/rust-tremor", optional = true }
+
+[features]
+with-tremor = ["tremor"]
